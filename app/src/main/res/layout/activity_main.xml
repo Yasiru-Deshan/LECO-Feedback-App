@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical"
+        android:id="@+id/menu"
+        >
+
+        <include layout="@layout/toolbar"
+            android:id="@+id/CustomToolbar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:padding="15dp"
+           >
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/quiz"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="normal"
+
+
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:padding="15dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="70dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginLeft="12dp"
+                    app:layout_constraintEnd_toStartOf="@+id/layout2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <ImageButton
+                        android:id="@id/imageButton1"
+                        android:layout_width="67dp"
+                        android:layout_height="67dp"
+                        android:background="@drawable/veryunsatisfied"
+                        android:padding="10dp"
+                        />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/imageButton1"
+                        android:layout_marginTop="10dp"
+                        android:text="Very Unsatisfied" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="70dp"
+                    android:layout_height="120dp"
+
+
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/layout3"
+                    app:layout_constraintStart_toEndOf="@+id/layout1"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton2"
+                        android:layout_width="67dp"
+                        android:layout_height="67dp"
+                        android:background="@drawable/unsatisfied"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/imageButton2"
+                        android:layout_marginTop="10dp"
+                        android:text="Unsatisfied" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout3"
+                    android:layout_width="70dp"
+                    android:layout_height="120dp"
+
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/layout2"
+                    app:layout_constraintStart_toEndOf="@+id/layout4"
+                    tools:ignore="MissingConstraints"
+
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton3"
+                        android:layout_width="67dp"
+                        android:layout_height="67dp"
+                        android:background="@drawable/neutrol"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/imageButton3"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Neutral" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout4"
+                    android:layout_width="70dp"
+                    android:layout_height="120dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    app:layout_constraintEnd_toStartOf="@+id/layout5"
+                    app:layout_constraintStart_toEndOf="@+id/layout3"
+                    tools:ignore="MissingConstraints"
+
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton4"
+                        android:layout_width="67dp"
+                        android:layout_height="67dp"
+                        android:background="@drawable/satisfied"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/imageButton4"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Satisfied" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout5"
+                    android:layout_width="70dp"
+                    android:layout_height="120dp"
+
+                    android:layout_marginEnd="12dp"
+
+                    android:layout_marginRight="12dp"
+
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/layout4"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <ImageButton
+                        android:id="@+id/imageButton5"
+                        android:layout_width="67dp"
+                        android:layout_height="67dp"
+                        android:background="@drawable/highlysatisfied"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@+id/imageButton5"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="Very Satisfied" />
+
+
+                </RelativeLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

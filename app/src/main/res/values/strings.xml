@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LECO</string>
+    <string name="app_name_long"> Lanka Electricity Company (pvt) Ltd</string>
+    <string name="quiz">How satisfied are you with our service?</string>
+</resources>
